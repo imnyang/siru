@@ -4,7 +4,7 @@ import os
 
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='시루야 ')
+bot = commands.Bot(command_prefix='시루야 ',intents=discord.Intents.all())
 
 url = os.environ['PINGPONG_URL']  # 핑퐁빌더 Custom API URL
 pingpong_token = os.environ['PINGPONG_TOKEN']  # 핑퐁빌더 Custom API Token

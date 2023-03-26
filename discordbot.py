@@ -6,7 +6,7 @@ import os
 
 PREFIX = "시루야"
 
-client = discord.Client()
+client = discord.Client(intents=discord.Intents.all())
 
 url = os.environ['PINGPONG_URL']  # 핑퐁빌더 Custom API URL
 pingpong_token = os.environ['PINGPONG_TOKEN']  # 핑퐁빌더 Custom API Token

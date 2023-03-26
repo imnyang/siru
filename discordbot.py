@@ -4,8 +4,7 @@ import discord
 import PingPongWr
 import os
 
-PREFIX = os.environ['PREFIX']
-TOKEN = os.environ['TOKEN']
+PREFIX = "시루야"
 
 client = discord.Client()
 

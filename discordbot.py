@@ -22,7 +22,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith("시루야 "):
+    if message.content.startswith("시루야"):
         str_text = (message.content.split(" "))[1].replace('시루야 ', '')
         return_data = await Ping.Pong(session_id ="Example", text = str_text, topic = True, image = True, dialog = True) # 핑퐁빌더 API에 Post 요청
         await message.reply(return_data["text"], mention_author=False)

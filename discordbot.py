@@ -24,7 +24,7 @@ async def on_message(message):
         return
 
     if message.content.startswith("시루야 "):
-        async with ctx.typing():
+        async with message.channel.typing():
             type_time = random.uniform(0.5, 2)
             await asyncio.sleep(type_time)
         
@@ -32,7 +32,7 @@ async def on_message(message):
         return_data = await Ping.Pong(session_id ="Example", text = str_text, topic = True, image = True, dialog = True) # 핑퐁빌더 API에 Post 요청
         await message.reply(return_data["text"], mention_author=False)
     elif message.content.startswith("시루야"):
-        async with ctx.typing():
+        async with message.channel.typing():
             type_time = random.uniform(0.5, 2)
             await asyncio.sleep(type_time)
             

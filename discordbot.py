@@ -4,6 +4,7 @@ import discord
 import PingPongWr
 import os
 import random
+import asyncio
 
 PREFIX = "시루야"
 

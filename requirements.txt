@@ -1,2 +1,4 @@
-discord==1.7.3
+py-cord
 PingPongWr
+firebase_admin
+python-dotenv

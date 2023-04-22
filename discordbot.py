@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 cred = credentials.Certificate(os.environ['FIREBASE_CREDENTIALS'])
-initialize_app(cred)
+app = initialize_app(cred)
 db = firestore.client()
 
 PREFIX = os.environ['PREFIX']

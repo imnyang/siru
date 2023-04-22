@@ -2,3 +2,4 @@ py-cord
 PingPongWr
 firebase_admin
 python-dotenv
+requests

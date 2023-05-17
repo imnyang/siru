@@ -2,13 +2,13 @@ import discord, asyncio, PingPongWr
 import os, random
 import requests, json
 from datetime import datetime, timezone, timedelta
-from firebase_admin import credentials, firestore, initialize_app
+#from firebase_admin import credentials, firestore, initialize_app
 from dotenv import load_dotenv
 load_dotenv()
 
-cred = credentials.Certificate(os.environ['FIREBASE_CREDENTIALS'])
-app = initialize_app(cred)
-db = firestore.client()
+#cred = credentials.Certificate(os.environ['FIREBASE_CREDENTIALS'])
+#app = initialize_app(cred)
+#db = firestore.client()
 
 PREFIX = os.environ['PREFIX']
 client = discord.Client(intents=discord.Intents.all())
@@ -76,7 +76,7 @@ async def on_message(message):
             
             return_data = await Ping.Pong(session_id ="Example", text = str_text, topic = True, image = True, dialog = True) # 핑퐁빌더 API에 Post 요청
             id = message.author.id
-            store_data(id, str_text, return_data["text"])
+#            store_data(id, str_text, return_data["text"])
             await message.reply(return_data["text"], mention_author=False)
         
         elif message.content.startswith(f"{PREFIX}"):
